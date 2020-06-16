@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 
 // Used to hide db uri and password
 require("dotenv/config");
 
 // Create an application with express
 const app = express();
+app.use(bodyParser.json());
 
 //Import routes
 
